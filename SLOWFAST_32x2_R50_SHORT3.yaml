@@ -21,7 +21,7 @@ DETECTION:
 AVA:
   FRAME_DIR: '/data/ava/frames'
   FRAME_LIST_DIR: '/data/ava/frame_lists'
-  ANNOTATION_DIR: '/data/ava/annotations'
+  ANNOTATION_DIR: '/data/ava/ava_annotations'
   #LABEL_MAP_FILE: 'ava_action_list_v2.1_for_activitynet_2018.pbtxt'
   #0GROUNDTRUTH_FILE: 'ava_val_v2.1.csv'
   #TRAIN_GT_BOX_LISTS: ['ava_train_v2.1.csv']
