@@ -5,7 +5,7 @@ TRAIN:
   EVAL_PERIOD: 5
   CHECKPOINT_PERIOD: 1
   AUTO_RESUME: True
-  CHECKPOINT_FILE_PATH: '/root/slowfast/configs/AVA/c2/SLOWFAST_32x2_R101_50_50.pkl.1'  #path to pretrain model
+  CHECKPOINT_FILE_PATH: '/ibex/scratch/projects/c2090/efficient_video_transformer/slowfast/slowfast/configs/AVA/c2/SLOWFAST_32x2_R101_50_50.pkl'  #path to pretrain model
   CHECKPOINT_TYPE: caffe2
 DATA:
   NUM_FRAMES: 32
@@ -14,14 +14,14 @@ DATA:
   TRAIN_CROP_SIZE: 224
   TEST_CROP_SIZE: 224
   INPUT_CHANNEL_NUM: [3, 3]
-  PATH_TO_DATA_DIR: '/data/ava'
+  PATH_TO_DATA_DIR: '/ibex/scratch/projects/c2090/efficient_video_transformer/data/ava'
 DETECTION:
   ENABLE: True
   ALIGNED: True
 AVA:
-  FRAME_DIR: '/data/ava/frames'
-  FRAME_LIST_DIR: '/data/ava/frame_lists'
-  ANNOTATION_DIR: '/data/ava/ava_annotations'
+  FRAME_DIR: '/ibex/scratch/projects/c2090/efficient_video_transformer/data/ava/frames'
+  FRAME_LIST_DIR: '/ibex/scratch/projects/c2090/efficient_video_transformer/data/ava/frame_lists'
+  ANNOTATION_DIR: '/ibex/scratch/projects/c2090/efficient_video_transformer/data/ava/ava_annotations'
   #LABEL_MAP_FILE: 'ava_action_list_v2.1_for_activitynet_2018.pbtxt'
   #0GROUNDTRUTH_FILE: 'ava_val_v2.1.csv'
   #TRAIN_GT_BOX_LISTS: ['ava_train_v2.1.csv']
@@ -84,8 +84,8 @@ TEST:
 DATA_LOADER:
   NUM_WORKERS: 2
   PIN_MEMORY: True
-NUM_GPUS: 1
+NUM_GPUS: 4
 NUM_SHARDS: 1
 RNG_SEED: 0
-OUTPUT_DIR: .
+OUTPUT_DIR: '/ibex/scratch/projects/c2090/efficient_video_transformer/slowfast/test'
 
